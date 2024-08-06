@@ -1,0 +1,250 @@
+/* Variáveis de Cores */
+:root {
+  --azul-claro-100: #f3f5fc;
+  --azul-claro-200: #eff1fa;
+  --azul-claro-300: #E9ECF8;
+  --azul-claro-400: #aab2d5;
+  --azul-claro-500: #757fb2;
+  --azul-claro-600: #eff1fa;
+
+  --azul-escuro-100: #609ed4;
+  --azul-escuro-200: #356ea9;
+  --azul-escuro-300: #0a3871;
+  --azul-escuro-400: #072b61;
+  --azul-escuro-500: #052051;
+
+  --cinza-100: #ced4da;
+  --cinza-200: #adb5bd;
+  --cinza-300: #868e96;
+  --cinza-400: #495057;
+  --cinza-500: #343a40;
+
+  --sonic-fundo: #0a3871;
+  --sonic-texto: #ffd700;
+  --sonic-borda: #072b61;
+  --sonic-botao-fundo: #356ea9;
+  --sonic-botao-texto: #ffd700;
+  --sonic-input-fundo: #0a3871;
+  --sonic-input-texto: #ffd700;
+  --sonic-hover: #609ed4;
+}
+
+/* Estilos Gerais */
+body {
+  background-color: #9bbec8;
+  font-family: 'Inter', sans-serif;
+  color: var(--azul-escuro-300);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.logo {
+  padding: 1.87rem;
+}
+
+button {
+  border: 1px solid var(--azul-escuro-300);
+  width: 20.5rem;
+  height: 4.18rem;
+  font-size: 1rem;
+  border-radius: 1.87rem;
+  cursor: pointer;
+  background-color: var(--azul-escuro-300);
+  color: var(--azul-claro-100);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 0% 10%;
+  display: flex;
+  gap: 1.87rem;
+  flex-direction: row;
+}
+
+.container__texto {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.container__botoes {
+  padding: 2% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.87rem;
+}
+
+.btnCriptografar {
+  color: var(--azul-claro-100);
+  background-color: var(--azul-escuro-300);
+}
+
+.btnDescriptografar {
+  color: var(--azul-escuro-300);
+  background-color: var(--azul-claro-100);
+}
+
+.container__resultado {
+  background-color: white;
+  border-radius: 1.87rem;
+  width: 25rem;
+  height: 25rem;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  gap: 60px;
+}
+
+.container__textarea {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.container__textarea textarea {
+  height: 20rem;
+  background-color: transparent;
+  color: var(--azul-escuro-300);
+  border: hidden;
+  outline: none;
+  font-size: 1.87rem;
+}
+
+.textoDestaque {
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 5% 0;
+}
+
+.resultado__imagem {
+  width: 80%;
+}
+
+.container__texto__aviso {
+  font-size: 1rem;
+  color: var(--cinza-400);
+}
+
+i {
+  color: var(--azul-escuro-300);
+}
+
+.container__footer {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 1.87rem;
+
+}
+body.modo-noturno .container__footer {
+  background-color: var(--sonic-borda);
+  color: var(--noite-texto);
+}
+
+/* Modo Sonic */
+body.modo-noturno {
+  background-color: var(--sonic-fundo);
+  color: var(--sonic-texto);
+}
+
+body.modo-noturno button {
+  border: 1px solid var(--sonic-borda);
+  background-color: var(--sonic-botao-fundo);
+  color: var(--sonic-botao-texto);
+}
+
+body.modo-noturno .btnCriptografar {
+  background-color: var(--sonic-botao-fundo);
+  color: var(--sonic-botao-texto);
+}
+
+body.modo-noturno .btnDescriptografar {
+  background-color: var(--sonic-input-fundo);
+  color: var(--sonic-input-texto);
+}
+
+body.modo-noturno .container__resultado {
+  background-color: var(--sonic-borda);
+  color: var(--sonic-texto);
+}
+
+body.modo-noturno .container__textarea textarea {
+  background-color: var(--sonic-input-fundo);
+  color: var(--sonic-input-texto);
+}
+
+body.modo-noturno .container__texto__aviso {
+  color: var(--sonic-texto);
+}
+
+body.modo-noturno button:hover {
+  background-color: var(--sonic-hover);
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .logo {
+    padding: 5% 5%;
+  }
+
+  .container {
+    padding: 0 2%;
+    flex-direction: column; /* Alterado para coluna em telas menores */
+  }
+
+  .container__texto {
+    width: 100%;
+    align-items: center;
+  }
+
+  .container__botoes {
+    flex-direction: column;
+    gap: 1rem; /* Ajustado o gap entre os botões */
+  }
+
+  button {
+    width: 100%;
+    height: 3rem; /* Ajustado para um tamanho mais adequado em dispositivos móveis */
+  }
+
+  .container__resultado {
+    width: 100%;
+    padding: 1.5rem; /* Ajustado para um padding mais adequado em dispositivos móveis */
+  }
+
+  .container__textarea {
+    padding: 0; /* Remover padding lateral */
+  }
+
+  .container__textarea textarea {
+    width: 100%; /* Ajustado para preencher a largura em telas menores */
+    height: 15rem; /* Ajustado para um tamanho mais adequado em dispositivos móveis */
+  }
+
+  .textoDestaque {
+    font-size: 1.2rem; /* Ajustado o tamanho da fonte */
+  }
+  .textoAbaixo{ display: none;
+    
+
+  }
+
+  .resultado__imagem {
+    width: 100%; /* Ajustado para preencher a largura em telas menores */
+  }
+}
