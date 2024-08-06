@@ -8,6 +8,7 @@ Este é um projeto de **decodificador de texto** que permite criptografar e desc
 - **Criptografia de mensagens**: Transforme sua mensagem em um texto criptografado.
 - **Descriptografia de mensagens**: Recupere a mensagem original a partir do texto criptografado.
 - **Modo Sonic**: Um tema especial com cores inspiradas no Sonic.
+-  **Site responsivo**: Esta aplicação esta responsiva a telas menores e Desktop.
 
 ## Exemplo de Decodificação
 Imagine que você tenha a mensagem original "HELLO". Ao criptografá-la, você pode obter algo como "IFMMP". Quando você descriptografa "IFMMP", você recupera a mensagem original "HELLO".
