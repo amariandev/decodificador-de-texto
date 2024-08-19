@@ -149,6 +149,7 @@ i {
   text-align: center;
   background-color: whitesmoke;
   border-radius: 1.87rem;
+  margin-top: auto;
 
 }
 body.modo-noturno .container__footer {
